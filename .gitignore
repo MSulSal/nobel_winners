@@ -1,0 +1,40 @@
+*/__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+__pycache__/*
+*.egg-info/*
+*.egg/*
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Flask stuff:
+instance/*
+
+# Scrapy stuff:
