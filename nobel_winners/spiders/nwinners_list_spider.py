@@ -51,20 +51,20 @@ class NWinnerItem(scrapy.Item):
     year = scrapy.Field()
     category = scrapy.Field()
     country = scrapy.Field()
-    # gender = scrapy.Field()
-    # born_in = scrapy.Field()
-    # date_of_birth = scrapy.Field()
-    # data_of_death = scrapy.Field()
-    # place_of_birth = scrapy.Field()
-    # place_of_death = scrapy.Field()
-    # text = scrapy.Field()
+    gender = scrapy.Field()
+    born_in = scrapy.Field()
+    date_of_birth = scrapy.Field()
+    date_of_death = scrapy.Field()
+    place_of_birth = scrapy.Field()
+    place_of_death = scrapy.Field()
+    text = scrapy.Field()
 
 
 # create a named spider
 class NWinnerSpider(scrapy.Spider):
     """ Scrapes the country and link text for Nobel winners. """
 
-    name = "nwinners_list"
+    name = "nwinners_full"
     allowed_domains = ["en.wikipedia.org"]
     start_urls = ["https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country"]
 
@@ -72,16 +72,59 @@ class NWinnerSpider(scrapy.Spider):
         h3s = response.xpath("//h3")
 
         for h3 in h3s:
-            country = h3.xpath("text()").extract()[0]
+            country = h3.xpath("text()").extract()
             if country:
                 winners = h3.xpath("../following-sibling::ol[1]")
                 for w in winners.xpath("li"):
-                    wdata = process_winner_li(w, country)
-                    yield NWinnerItem(
-                        name=wdata["name"],
-                        link=wdata["link"],
-                        year=wdata["year"],
-                        country=wdata["country"],
-                        category=wdata["category"]
+                    wdata = process_winner_li(w, country[0])
+                    request = scrapy.Request(
+                        wdata["link"],
+                        callback=self.parse_bio,
+                        dont_filter=True
                     )
+                    request.meta["item"] = NWinnerItem(**wdata)
+                    yield request
+
+    def parse_bio(self, response):
+        item = response.meta["item"]
+        href = response.xpath("//li[@id='t-wikibase']/a/@href").extract()
+
+        if href:
+            url = href[0]
+            wiki_code = url.split("/")[-1]
+            request = scrapy.Request(
+                href[0],
+                callback=self.parse_wiki_data,
+                dont_filter=True
+            )
+            request.meta["item"] = item
+            yield request
+
+    def parse_wiki_data(self, response):
+        item = response.meta["item"]
+        property_codes = [
+            {'name':'date_of_birth', 'code':'P569'},
+            {'name':'date_of_death', 'code':'P570'},
+            {'name':'place_of_birth', 'code':'P19', 'link':True},
+            {'name':'place_of_death', 'code':'P20', 'link':True},
+            {'name':'gender', 'code':'P21', 'link':True}
+        ]
+
+        for prop in property_codes:
+            link_html = ""
+            if prop.get("link"):
+                link_html = "/a"
+
+            code_block = response.xpath("//*[@id='%s']"%(prop["code"]))
+
+            if code_block:
+                print("code block:", code_block.extract())
+                values = code_block.css(".wikibase-snakview-value")
+                value = values[0]
+                prop_sel = value.xpath(".%s/text()"%link_html)
+                if prop_sel:
+                    item[prop["name"]] = prop_sel[0].extract()
+
+        yield item
+
 
