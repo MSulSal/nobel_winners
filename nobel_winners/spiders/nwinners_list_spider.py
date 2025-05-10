@@ -65,6 +65,12 @@ class NWinnerSpider(scrapy.Spider):
     """ Scrapes the country and link text for Nobel winners. """
 
     name = "nwinners_full"
+    custom_settings = {
+        "ITEM_PIPELINES": {
+            "nobel_winners.pipelines.DropNonPersons": 300
+        },
+        "IMAGES_STORE": "images"
+    }
     allowed_domains = ["en.wikipedia.org"]
     start_urls = ["https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country"]
 
@@ -94,13 +100,13 @@ class NWinnerSpider(scrapy.Spider):
             wiki_code = url.split("/")[-1]
             request = scrapy.Request(
                 href[0],
-                callback=self.parse_wiki_data,
+                callback=self.parse_wikidata,
                 dont_filter=True
             )
             request.meta["item"] = item
             yield request
 
-    def parse_wiki_data(self, response):
+    def parse_wikidata(self, response):
         item = response.meta["item"]
         property_codes = [
             {'name':'date_of_birth', 'code':'P569'},

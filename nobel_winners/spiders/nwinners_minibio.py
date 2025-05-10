@@ -13,6 +13,12 @@ class NWinnerItemBio(scrapy.Item):
 
 class NwinnerSpiderBio(scrapy.Spider):
     name = "nwinners_minibio"
+    custom_settings = {
+        "ITEM_PIPELINES": {
+            "nobel_winners.pipelines.NobelImagesPipeline": 300
+        },
+        "IMAGES_STORE": "images"
+    }
     allowed_domains = ["en.wikipedia.org"]
     start_urls = ["https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country"]
 
