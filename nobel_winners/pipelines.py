@@ -13,6 +13,8 @@ class NobelImagesPipeline(ImagesPipeline):
     def item_completed(self, results, item, info):
         if info.spider.name != "nwinners_minibio":
             return item
+        if not item.get("image_urls"):
+            return item
         image_paths = [img["path"] for ok, img in results if ok]
 
         if not image_paths:

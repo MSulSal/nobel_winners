@@ -1,0 +1,20 @@
+Content-Length: 28952
+Date: Sat, 10 May 2025 03:45:59 GMT
+Etag: 55e0012f115a6a3388cb7a4dc1b83215
+Server: ATS/9.2.9
+Content-Type: image/jpeg
+Content-Disposition: inline;filename*=UTF-8''DavidThouless_1995_UW.jpg
+Last-Modified: Tue, 03 Dec 2024 18:29:53 GMT
+Age: 0
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 miss
+X-Cache-Status: hit-local
+Server-Timing: cache;desc="hit-local", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *

@@ -1,0 +1,20 @@
+Content-Length: 12553
+Content-Type: image/jpeg
+Content-Disposition: inline;filename*=UTF-8''Kip_Thorne_in_2022.jpg
+Last-Modified: Tue, 28 Jan 2025 06:12:10 GMT
+Date: Sat, 10 May 2025 03:45:49 GMT
+Server: envoy
+Etag: 4da234d463222d268ca1878656e68b7f
+Age: 0
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 miss
+X-Cache-Status: hit-local
+Server-Timing: cache;desc="hit-local", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *

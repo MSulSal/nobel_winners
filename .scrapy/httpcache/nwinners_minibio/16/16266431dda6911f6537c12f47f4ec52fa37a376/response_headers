@@ -1,0 +1,20 @@
+Content-Length: 14524
+Content-Type: image/jpeg
+X-Object-Meta-Sha1Base36: njubaxa6kugii9t3cwq6g58ualkf306
+Last-Modified: Sat, 13 Feb 2016 02:55:15 GMT
+Date: Sat, 10 May 2025 00:57:17 GMT
+Server: envoy
+Etag: ca257e987415cc8e4670ec5a776b0a01
+Age: 10103
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 hit/1
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *

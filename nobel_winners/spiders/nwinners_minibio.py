@@ -19,7 +19,7 @@ class NwinnerSpiderBio(scrapy.Spider):
         },
         "IMAGES_STORE": "images"
     }
-    allowed_domains = ["en.wikipedia.org"]
+    allowed_domains = ["en.wikipedia.org", "upload.wikimedia.org"]
     start_urls = ["https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country"]
 
     def parse(self, response):

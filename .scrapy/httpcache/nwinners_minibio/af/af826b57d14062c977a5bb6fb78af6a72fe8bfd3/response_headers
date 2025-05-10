@@ -1,0 +1,20 @@
+Content-Length: 18304
+Date: Fri, 09 May 2025 19:02:53 GMT
+Etag: 16fecf5440f93aa1ae7541b934de300d
+Server: ATS/9.2.9
+Content-Type: image/jpeg
+Content-Disposition: inline;filename*=UTF-8''Miguel_Angel_Asturias.jpg
+Last-Modified: Sun, 30 Jan 2022 09:15:06 GMT
+Age: 31410
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 hit/15
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *

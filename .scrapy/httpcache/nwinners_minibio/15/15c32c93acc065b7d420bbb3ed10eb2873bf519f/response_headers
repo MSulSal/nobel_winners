@@ -1,0 +1,20 @@
+Content-Length: 18478
+Date: Fri, 09 May 2025 13:45:46 GMT
+Etag: 67f2ec0572fe446601e295127f128160
+Server: ATS/9.2.9
+Content-Type: image/jpeg
+Content-Disposition: inline;filename*=UTF-8''%D0%92%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D0%B9_%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D0%B8%D1%87_%D0%93%D0%B8%D0%BD%D0%B7%D0%B1%D1%83%D1%80%D0%B3.jpg
+Last-Modified: Wed, 07 Dec 2022 09:56:50 GMT
+Age: 50421
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 hit/4
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *

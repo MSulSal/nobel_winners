@@ -1,0 +1,20 @@
+Content-Length: 16246
+Date: Fri, 09 May 2025 15:11:48 GMT
+Etag: 7264595ed13de86f3c07add22f9d9785
+Server: ATS/9.2.9
+Content-Type: image/jpeg
+Content-Disposition: inline;filename*=UTF-8''Barbara_McClintock_%281902-1992%29_shown_in_her_laboratory_in_1947.jpg
+Last-Modified: Sun, 26 Jan 2025 08:26:00 GMT
+Age: 45229
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 hit/26
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *

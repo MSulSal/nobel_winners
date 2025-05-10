@@ -1,0 +1,20 @@
+Content-Length: 34020
+Date: Fri, 09 May 2025 06:25:44 GMT
+Etag: 1bd45e80d8c4b1406a0c120af1da818f
+Server: ATS/9.2.9
+Content-Type: image/jpeg
+Content-Disposition: inline;filename*=UTF-8''D810_4987_Tu_Youyou%2C_medicine_%2822945001843%29_%28cropped%29.jpg
+Last-Modified: Fri, 22 Sep 2023 23:28:14 GMT
+Age: 76858
+Accept-Ranges: bytes
+X-Cache: cp4045 hit, cp4045 hit/7
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front", host;desc="cp4045"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 75.4.177.221
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *
