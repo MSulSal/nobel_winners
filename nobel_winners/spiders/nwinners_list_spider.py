@@ -118,7 +118,6 @@ class NWinnerSpider(scrapy.Spider):
             code_block = response.xpath("//*[@id='%s']"%(prop["code"]))
 
             if code_block:
-                print("code block:", code_block.extract())
                 values = code_block.css(".wikibase-snakview-value")
                 value = values[0]
                 prop_sel = value.xpath(".%s/text()"%link_html)
