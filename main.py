@@ -1,9 +1,11 @@
 import pandas as pd
 import numpy as np
+import sqlalchemy
+
+engine = sqlalchemy.create_engine("sqlite:///data/nobel_winners_clean.db")
+
 
 df = pd.read_json("data/nwinners.json")
-
-
 
 def parse_date_flexible(date_str):
     try:
@@ -63,5 +65,11 @@ df_clean_bios = pd.merge(df_wbi, df_winners_bios, how='outer', on='link')
 # drop duplicate rows
 df_clean_bios = df_clean_bios[~df_clean_bios.name.isnull()].drop_duplicates(subset=['link', 'year'])
 
-df_clean_bios.to_json('data/nobel_winners_cleaned.json',\
-orient='records', date_format='iso')
+# assume df_clean_bios['image_urls'] contains lists like ['url1','url2',…]
+df_clean_bios['image_urls'] = df_clean_bios['image_urls'].str.join(';')
+
+
+df_clean_bios.to_json('data/nobel_winners_cleaned.json', orient='records', date_format='iso')
+df_clean_bios.to_sql("winners", engine, if_exists="replace")
+df_read_sql = pd.read_sql("winners", engine)
+print(df_read_sql.info())
